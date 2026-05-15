@@ -1,0 +1,402 @@
+Breadth First Search 
+1. What is Breadth First Search (BFS)?
+Answer: BFS is an uninformed search algorithm that explores nodes level by level from the root node until the goal is found.
+2. Why is BFS used in the 8-puzzle problem?
+Answer: BFS is used to find the shortest path (minimum moves) from the initial state to the goal state.
+3. What data structure is used in BFS?
+Answer: Queue (FIFO – First In First Out).
+4. What is the role of the visited set in BFS?
+Answer: It avoids revisiting already explored states and prevents infinite loops.
+5. What are the possible moves in the 8-puzzle problem?
+Answer: Up, Down, Left, and Right.
+6. What is the goal state in the 8-puzzle problem?
+Answer: The desired arrangement of tiles where all numbers are in correct order and the blank tile is in the correct position.
+7. What is the time complexity of BFS?
+Answer: O(b^d), where b is branching factor and d is depth.
+8. Is BFS complete?
+Answer: Yes, BFS always finds a solution if one exists.
+9. Is BFS optimal?
+Answer: Yes, BFS gives the shortest solution in unweighted problems.
+10. What is the disadvantage of BFS?
+Answer: It requires high memory because all nodes at each level must be stored.
+
+
+
+
+
+
+Depth First Search 
+1. What is Depth First Search (DFS)?
+Answer: DFS is a search algorithm that explores one branch completely before moving to another branch.
+2. Why is DFS used in the Water Jug problem?
+Answer: DFS is used to explore all possible water jug states until the target amount is reached.
+3. What data structure is used in DFS?
+Answer: Stack (or recursion).
+4. What is the initial state in the Water Jug problem?
+Answer: Both jugs are empty, represented as (0,0).
+5. What operations are possible in the Water Jug problem?
+Answer: Fill a jug, empty a jug, and pour water from one jug to another.
+6. What is the purpose of the visited state list?
+Answer: It prevents revisiting the same states and avoids infinite loops.
+7. Is DFS optimal?
+Answer: No, DFS does not always find the shortest solution.
+8. Is DFS complete?
+Answer: Yes, if the search space is finite and cycles are avoided.
+9. What is the time complexity of DFS?
+Answer: O(b^m), where b is branching factor and m is maximum depth.
+10. What is the main advantage of DFS?
+Answer: It uses less memory compared to BFS.
+
+
+
+
+
+
+
+A* algorithm.
+1. What is the A algorithm?*
+Answer: A* is an informed search algorithm that finds the shortest path using cost and heuristic values.
+2. What formula is used in A?*
+Answer: f(n) = g(n) + h(n)
+3. What does g(n) represent?
+Answer: Actual cost from the start node to the current node.
+4. What does h(n) represent?
+Answer: Estimated cost from the current node to the goal node (heuristic value).
+5. Why is A called an informed search algorithm?*
+Answer: Because it uses heuristic information to guide the search.
+6. What data structure is commonly used in A?*
+Answer: Priority Queue.
+7. What is the heuristic in the Romania map problem?
+Answer: Straight-line distance from each city to Bucharest.
+8. Is A optimal?*
+Answer: Yes, if the heuristic is admissible.
+9. What is an admissible heuristic?
+Answer: A heuristic that never overestimates the actual cost to reach the goal.
+10. What is the advantage of A over BFS?*
+Answer: A* reaches the goal faster by using heuristic guidance.
+
+
+
+
+
+
+
+AO* Algorithm.
+1. What is the AO algorithm?*
+Answer: AO* is an informed search algorithm used for solving problems represented as AND-OR graphs.
+2. What is an AND-OR graph?
+Answer: A graph where OR nodes represent alternative choices and AND nodes represent dependent subproblems that must all be solved.
+3. Why is AO used?*
+Answer: AO* is used to find the optimal solution path in complex problem decomposition.
+4. What is the role of heuristic values in AO?*
+Answer: Heuristic values estimate the cost to reach the goal and guide the search.
+5. How does AO handle OR nodes?*
+Answer: It selects the child with the minimum cost.
+6. How does AO handle AND nodes?*
+Answer: It selects all required child nodes and sums their costs.
+7. What is backpropagation in AO?*
+Answer: Updating parent node costs based on child node solutions.
+8. Is AO an informed search algorithm?*
+Answer: Yes, because it uses heuristic information.
+9. What is the advantage of AO over A?**
+Answer: AO* can solve AND-OR graph problems, whereas A* works mainly with OR graphs.
+10. Where is AO commonly used?*
+Answer: Expert systems, planning, and problem-solving applications.
+
+
+
+
+
+
+Single Player Game
+1. What is a single-player game in AI?
+Answer: A problem where one agent tries to reach a goal state without an opponent.
+2. Which problem is used in this experiment?
+Answer: 8-Puzzle problem.
+3. What is a heuristic function?
+Answer: A function that estimates how close the current state is to the goal state.
+4. Which heuristic is used in this program?
+Answer: Misplaced tile heuristic.
+5. What does the misplaced tile heuristic measure?
+Answer: The number of tiles not in their correct positions.
+6. Which search strategy is used here?
+Answer: Best-First Search.
+7. What data structure is used in Best-First Search?
+Answer: Priority Queue.
+8. Why is heuristic search better than blind search?
+Answer: It reaches the goal faster by selecting promising states.
+9. Is heuristic search always optimal?
+Answer: No, it depends on the heuristic used.
+10. What is the goal of the 8-puzzle problem?
+Answer: To arrange tiles in the correct order by moving the blank space.
+
+
+
+
+
+
+Two Player Game 
+1. What is a two-player game in AI?
+Answer: A game where two players take turns making moves to achieve their objective.
+2. Which game is implemented in this experiment?
+Answer: Tic-Tac-Toe.
+3. What algorithm is used in this program?
+Answer: Minimax algorithm.
+4. What is the purpose of the heuristic function?
+Answer: To evaluate the board state and choose the best move.
+5. What symbols are used in Tic-Tac-Toe?
+Answer: X and O.
+6. What is the goal of Tic-Tac-Toe?
+Answer: To place three identical symbols in a row, column, or diagonal.
+7. What does the Minimax algorithm do?
+Answer: It selects the optimal move by considering all possible future moves.
+8. What is a draw in Tic-Tac-Toe?
+Answer: When all cells are filled and no player wins.
+9. Is Tic-Tac-Toe a deterministic game?
+Answer: Yes, because the outcome depends only on player moves.
+10. What is the advantage of Minimax?
+Answer: It guarantees the best possible move for the computer player.
+
+
+
+
+
+
+Certainty Factor Problem
+1. What is a Certainty Factor (CF)?
+Answer: Certainty Factor is a measure used to represent confidence in a conclusion under uncertain conditions.
+2. Where is the Certainty Factor model used?
+Answer: In expert systems for uncertain reasoning.
+3. What is the range of CF values?
+Answer: From -1 to +1.
+4. What does CF = +1 indicate?
+Answer: Complete belief in the hypothesis.
+5. What does CF = -1 indicate?
+Answer: Complete disbelief in the hypothesis.
+6. What does CF = 0 indicate?
+Answer: Uncertainty or no confidence.
+7. What are MB and MD?
+Answer: MB is Measure of Belief, and MD is Measure of Disbelief.
+8. What is the CF formula?
+Answer: CF = MB − MD
+9. In this experiment, which disease is considered?
+Answer: Malaria.
+10. What is the advantage of Certainty Factor?
+Answer: It helps expert systems make decisions even with uncertain information.
+
+
+
+
+
+
+Constraint Satisfaction Problem 
+1. What is a Constraint Satisfaction Problem (CSP)?
+Answer: CSP is a problem where variables must be assigned values that satisfy given constraints.
+2. What are the main components of CSP?
+Answer: Variables, domains, and constraints.
+3. What are the variables in this experiment?
+Answer: The 9 squares of the 3×3 grid.
+4. What is the domain in this CSP?
+Answer: Colors such as Red, Blue, and Green.
+5. What is the constraint in this problem?
+Answer: No two adjacent squares should have the same color.
+6. Which technique is used to solve CSP?
+Answer: Backtracking algorithm.
+7. What is backtracking?
+Answer: A method of trying possible solutions and going back when a constraint fails.
+8. What happens if a constraint is violated?
+Answer: The algorithm backtracks and tries another value.
+9. Where are CSPs used in AI?
+Answer: Scheduling, map coloring, puzzle solving, and resource allocation.
+10. What is the advantage of CSP?
+Answer: It efficiently solves problems with multiple constraints.
+
+
+
+
+
+
+Expert System for Medical Diagnosis
+1. What is an Expert System?
+Answer: An Expert System is an AI program that mimics the decision-making ability of a human expert.
+2. What are the main components of an Expert System?
+Answer: Knowledge Base, Inference Engine, and User Interface.
+3. What is a Knowledge Base?
+Answer: It stores facts and IF–THEN rules used for reasoning.
+4. What is an Inference Engine?
+Answer: It applies logical rules to derive conclusions from the knowledge base.
+5. Which inference method is used in this experiment?
+Answer: Forward Chaining.
+6. What is Forward Chaining?
+Answer: A data-driven reasoning method that starts with known facts and derives conclusions.
+7. What is the purpose of this medical expert system?
+Answer: To predict possible diseases based on patient symptoms.
+8. What input is given to the system?
+Answer: Symptoms entered by the user (Yes/No responses).
+9. What output does the system provide?
+Answer: Possible disease diagnosis with confidence level.
+10. What is an application of Expert Systems?
+Answer: Medical diagnosis, troubleshooting, and decision support systems.
+
+
+
+
+
+
+Rule-Based System
+1. What is a Rule-Based System?
+Answer: A Rule-Based System is an AI system that makes decisions using predefined IF–THEN rules.
+2. What is the knowledge base in a rule-based system?
+Answer: It is the collection of rules and facts used for decision making.
+3. What is the inference engine?
+Answer: It applies rules to input data to produce a decision.
+4. Which application is used in this experiment?
+Answer: Loan Approval System.
+5. What inputs are considered in this system?
+Answer: Income, credit score, employment status, and loan amount.
+6. What is the output of this system?
+Answer: Loan Approved, Conditionally Approved, or Rejected.
+7. What type of rules are used?
+Answer: IF–THEN rules.
+8. What is the advantage of a rule-based system?
+Answer: Easy to understand and implement.
+9. Where are rule-based systems used?
+Answer: Banking, diagnosis, decision support, and automation.
+10. What is a limitation of rule-based systems?
+Answer: Difficult to manage when rules become very large.
+
+
+
+
+
+
+Knight’s Tour Problem 
+1. What is the Knight’s Tour problem?
+Answer: It is a chess problem where the knight must visit every square of the board exactly once.
+2. Which programming language is used in this experiment?
+Answer: LISP.
+3. How does a knight move in chess?
+Answer: Two squares in one direction and one square perpendicular (L-shape).
+4. How many squares are there on a standard chessboard?
+Answer: 64 squares.
+5. What is the objective of Knight’s Tour?
+Answer: To visit all 64 squares without repeating any square.
+6. Which technique is commonly used to solve Knight’s Tour?
+Answer: Backtracking.
+7. What happens if no valid move is available?
+Answer: The algorithm backtracks to the previous position.
+8. Is Knight’s Tour a search problem?
+Answer: Yes, it is a search and problem-solving task in AI.
+9. What is the advantage of backtracking?
+Answer: It systematically explores possible solutions.
+10. Where is this concept used?
+Answer: Puzzle solving, pathfinding, and AI search problems.
+
+
+
+
+
+Crossword Puzzle 
+1. What is a crossword puzzle?
+Answer: A word puzzle where words are arranged horizontally and vertically with common intersecting letters.
+2. Which language is used in this experiment?
+Answer: LISP.
+3. What is the main objective of this program?
+Answer: To arrange words in a crossword pattern with proper intersections.
+4. What is an intersecting letter?
+Answer: A common letter shared by two words.
+5. How are words placed in a crossword?
+Answer: Horizontally and vertically.
+6. Why is pattern matching important in crossword puzzles?
+Answer: To ensure letters match correctly at intersections.
+7. Is crossword generation a search problem?
+Answer: Yes, it involves finding valid word placements.
+8. What data structure can represent a crossword grid?
+Answer: Two-dimensional array (matrix).
+9. Where are crossword-related techniques used in AI?
+Answer: Natural language processing and puzzle solving.
+10. What is the advantage of using LISP in AI problems?
+Answer: LISP supports symbolic processing and recursive problem solving.
+
+
+
+
+
+Resolution in Predicate Logic 
+1. What is Predicate Logic?
+Answer: Predicate Logic is a logical system used to represent objects, properties, and relationships.
+2. Which language is used in this experiment?
+Answer: Prolog.
+3. What is a predicate in Prolog?
+Answer: A predicate represents a fact or relationship between objects.
+4. What is a fact in Prolog?
+Answer: A statement that is always true, such as food(pizza).
+5. What is a rule in Prolog?
+Answer: A logical statement defining relationships, such as meal(X) :- food(X).
+6. What is a query in Prolog?
+Answer: A question asked to the Prolog system to get an answer.
+7. What is resolution in predicate logic?
+Answer: A reasoning method used to derive conclusions from facts and rules.
+8. What is unification in Prolog?
+Answer: Matching variables with values to satisfy a query.
+9. What is backtracking in Prolog?
+Answer: Searching alternative solutions when one path fails.
+10. Where is Predicate Logic used?
+Answer: Expert systems, knowledge representation, and AI reasoning.
+
+
+
+
+
+
+Resolution in Propositional Logic 
+1. What is Propositional Logic?
+Answer: Propositional Logic is a branch of logic where statements are represented as true or false propositions.
+2. Which language is used in this experiment?
+Answer: Prolog.
+3. What is resolution in propositional logic?
+Answer: Resolution is an inference technique used to derive conclusions by eliminating contradictions.
+4. What is a proposition?
+Answer: A statement that has a truth value, either true or false.
+5. What is a logical clause?
+Answer: A clause is a logical expression made up of literals.
+6. What is a literal?
+Answer: A literal is a proposition or its negation.
+7. Why is resolution used in AI?
+Answer: For automated theorem proving and logical reasoning.
+8. What is contradiction in logic?
+Answer: A statement that is always false.
+9. What is the advantage of Prolog in logic problems?
+Answer: It supports rule-based reasoning and automatic backtracking.
+10. What is the application of propositional logic?
+Answer: Knowledge representation, expert systems, and decision making.
+
+
+
+
+
+
+
+Bank Loan Approval Prediction using Logistic Regression  
+
+1. What is Logistic Regression?
+Answer: Logistic Regression is a supervised machine learning algorithm used for classification problems.
+2. Why is Logistic Regression used in this experiment?
+Answer: To predict whether a bank loan will be approved or rejected.
+3. What are the input features in this program?
+Answer: Income, credit score, and debt.
+4. What is the output of Logistic Regression?
+Answer: A class label such as Approved or Rejected.
+5. What type of learning is Logistic Regression?
+Answer: Supervised learning.
+6. What library is used in Python for Logistic Regression?
+Answer: Scikit-learn (sklearn).
+7. Why is train-test split used?
+Answer: To train the model and test its performance on unseen data.
+8. What is accuracy in machine learning?
+Answer: The percentage of correct predictions made by the model.
+9. Is Logistic Regression used for classification or regression?
+Answer: Classification.
+10. What are applications of Logistic Regression?
+Answer: Loan approval, disease prediction, spam detection, and customer churn prediction.
+
